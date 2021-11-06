@@ -1,28 +1,25 @@
 #include "main.h"
-
 /**
  * @print_char - print type char
- *
  * @c: pointer to argument
  * Return: Nothing
  */
 
-void print_char(va_list ap)
+void print_char(va_list c)
 {
-	_putchar(va_arg(ap, int));
-	/*_putchar('\n');*/
+	_putchar(va_arg(c, int));
 }
 
 /**
  * @print_str - print type char *
  *
- * @c: pointer to argument
+ * @s: pointer to argument
  * Return: Nothing
  */
 
-void print_str(va_list ap)
+void print_str(va_list s)
 {
-	char *str = va_arg(ap, char *);
+	char *str = va_arg(s, char *);
 	if (str)
 	{
 		while (*str)
@@ -30,20 +27,47 @@ void print_str(va_list ap)
 			_putchar(*str);
 			str++;
 		}
-		/*_putchar('\n');*/
 	}
 }
 
 /**
  * @print_percent - print a porcent sing (%)
  *
- * @c: pointer to argument
+ * @p: pointer to argument
  * Return: Nothing
  */
 
-void print_percent(va_list ap)
+void print_percent(va_list p)
 {
 	_putchar('%');
-	/*_putchar('\n');*/
-	va_arg(ap, int);
+	va_arg(p, int);
+}
+
+/**
+ * @print_char - print type char
+ * @i: pointer to argument
+ * Return: Nothing
+ */
+
+void print_int(va_list i)
+{
+	_putchar(va_arg(i, int));
+}
+
+/**
+ * @print_char - print type char
+ * @d: pointer to argument
+ * Return: Nothing
+ */
+
+void print_decimal(va_list d)
+{
+	int i = (va_arg(d, int));
+	printf("identificar = %d", i);
+	if (i < 0)
+	{
+		i = -i;
+		_putchar('-');
+	}
+	_putchar(i + 1);
 }

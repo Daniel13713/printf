@@ -10,9 +10,9 @@ int _printf(const char *format, ...)
 	print_t arg[] = {
 		{"c", print_char},
 		{"s", print_str},
-		{"%", print_percent},
 		{"d", print_decimal},
 		{"i", print_int},
+        {"%", print_percent},
 		{NULL, NULL}
 	};
 

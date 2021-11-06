@@ -15,6 +15,7 @@ typedef struct my_printf
 
 int _putchar(char c);
 int _len(char *s);
+void print_number(int n);
 int _printf(const char *format, ...);
 
 void print_char(va_list ap);
