@@ -45,5 +45,5 @@ void print_char(va_list ap)
 {
 	putchar('%');
 	putchar('\0');
-	va_arg(arg, int);
+	va_arg(ap, int);
 }
