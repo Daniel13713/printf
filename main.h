@@ -18,7 +18,7 @@ int _len(char *s);
 void print_number(int n);
 int _printf(const char *format, ...);
 
-void print_char(va_list ap);
+int print_char(va_list ap);
 void print_str(va_list ap);
 void print_percent(va_list ap);
 void print_decimal(va_list ap);

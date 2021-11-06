@@ -5,9 +5,10 @@
  * Return: Nothing
  */
 
-void print_char(va_list c)
+int print_char(va_list c)
 {
 	_putchar(va_arg(c, int));
+	return (1);
 }
 
 /**
@@ -17,17 +18,21 @@ void print_char(va_list c)
  * Return: Nothing
  */
 
-void print_str(va_list s)
+int print_str(va_list s)
 {
 	char *str = va_arg(s, char *);
+	int i = 0;
+
 	if (str)
 	{
 		while (*str)
 		{
 			_putchar(*str);
 			str++;
+			i++;
 		}
 	}
+	return (i);
 }
 
 /**
@@ -37,10 +42,11 @@ void print_str(va_list s)
  * Return: Nothing
  */
 
-void print_percent(va_list p)
+int print_percent(va_list p)
 {
 	_putchar('%');
 	va_arg(p, int);
+	return (1);
 }
 
 /**
@@ -49,9 +55,10 @@ void print_percent(va_list p)
  * Return: Nothing
  */
 
-void print_int(va_list i)
+int print_int(va_list i)
 {
-	_putchar(va_arg(i, int));
+	print_number(va_arg(i, int));
+	return (-1);
 }
 
 /**
@@ -60,14 +67,9 @@ void print_int(va_list i)
  * Return: Nothing
  */
 
-void print_decimal(va_list d)
+int print_decimal(va_list d)
 {
-	int i = (va_arg(d, int));
-	printf("identificar = %d", i);
-	if (i < 0)
-	{
-		i = -i;
-		_putchar('-');
-	}
-	_putchar(i + 1);
+	int i = va_arg(d, int);
+	print_number(i);
+	return (-1);
 }

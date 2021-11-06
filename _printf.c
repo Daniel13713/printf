@@ -6,6 +6,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
+	int len = 0;
 
 	print_t arg[] = {
 		{"c", print_char},
@@ -28,7 +29,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == *arg[j].name)
 				{
-       		 			arg[j].f(ap);
+       		 			len = arg[j].f(ap);
        	        	 		break;
            			}
             			j++;
@@ -40,5 +41,5 @@ int _printf(const char *format, ...)
 		}
 	}
     	va_end(ap);
-    	return (0);
+    	return (len);
 }
