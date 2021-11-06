@@ -35,7 +35,7 @@ void print_str(va_list ap)
 }
 
 /**
- * @print_porcent - print a porcent sing (%)
+ * @print_percent - print a porcent sing (%)
  *
  * @c: pointer to argument
  * Return: Nothing

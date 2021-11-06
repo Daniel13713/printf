@@ -13,7 +13,7 @@ int main(void)
     /*printf("-Character:[%c]\n", 'H');*/
     _printf("_String:[%s]\n", "I am a string !");
     /*printf("-String:[%s]\n", "I am a string !");*/
-    /*_printf("_Percent:[%%]\n");*/
+    _printf("_Percent:[%%]\n");
     /*printf("-Percent:[%%]\n");*/
 
 
