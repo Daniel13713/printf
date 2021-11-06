@@ -10,7 +10,7 @@
 void print_char(va_list ap)
 {
 	_putchar(va_arg(ap, int));
-	_putchar('\n');
+	/*_putchar('\n');*/
 }
 
 /**
@@ -30,7 +30,7 @@ void print_str(va_list ap)
 			_putchar(*str);
 			str++;
 		}
-		_putchar('\n');
+		/*_putchar('\n');*/
 	}
 }
 
@@ -39,11 +39,11 @@ void print_str(va_list ap)
  *
  * @c: pointer to argument
  * Return: Nothing
- *
+ */
 
 void print_percent(va_list ap)
 {
-	putchar('%');
-	putchar('\n');
+	_putchar('%');
+	/*_putchar('\n');*/
 	va_arg(ap, int);
-}*/
+}
