@@ -20,5 +20,6 @@ int _printf(const char *format, ...);
 void print_char(va_list ap);
 void print_str(va_list ap);
 void print_percent(va_list ap);
-
+void print_decimal(va_list ap);
+void print_int(va_list ap);
 #endif
