@@ -9,7 +9,7 @@
  */
 typedef struct my_printf
 {
-	char name;
+	char *name;
 	void (*f)(va_list);
 } print_t;
 
@@ -17,6 +17,6 @@ int _printf(const char *format, ...);
 
 void print_char(va_list ap);
 void print_str(va_list ap);
-void print_char(va_list ap);
+void print_percent(va_list ap);
 
 #endif
