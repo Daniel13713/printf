@@ -30,20 +30,19 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == *arg[j].name)
 				{
-       		 			len += arg[j].f(ap);
-       	        	 		break;
-           			}
-            			j++;
+    	 			len += arg[j].f(ap);
+        	 		break;
+           		}
+        		j++;
 			}
+			i++;
 		}
-		else if (format[i - 1] != '%')
+		else if (format[i] != '%')
 		{
 			_putchar(format[i]);
 			k++;
 		}
 	}
-	printf("end\n");
-	printf("k = %d\n len = %d\n", k, len);
-    	va_end(ap);
-    	return (len);
+    va_end(ap);
+	return (k + len);
 }

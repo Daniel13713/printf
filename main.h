@@ -15,12 +15,13 @@ typedef struct my_printf
 
 int _putchar(char c);
 int _len(char *s);
+int count_digit(int i);
 void print_number(int n);
 int _printf(const char *format, ...);
 
-int print_char(va_list ap);
-int print_str(va_list ap);
-int print_percent(va_list ap);
-int print_decimal(va_list ap);
-int print_int(va_list ap);
+int print_char(va_list c);
+int print_str(va_list s);
+int print_percent(va_list p);
+int print_decimal(va_list d);
+int print_int(va_list i);
 #endif

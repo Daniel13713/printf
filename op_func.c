@@ -4,7 +4,6 @@
  * @c: pointer to argument
  * Return: Nothing
  */
-
 int print_char(va_list c)
 {
 	_putchar(va_arg(c, int));
@@ -17,7 +16,6 @@ int print_char(va_list c)
  * @s: pointer to argument
  * Return: Nothing
  */
-
 int print_str(va_list s)
 {
 	char *str = va_arg(s, char *);
@@ -41,11 +39,9 @@ int print_str(va_list s)
  * @p: pointer to argument
  * Return: Nothing
  */
-
-int print_percent(va_list p)
+int print_percent(va_list __attribute__ ((unused)) p)
 {
 	_putchar('%');
-	va_arg(p, int);
 	return (1);
 }
 
@@ -54,11 +50,11 @@ int print_percent(va_list p)
  * @i: pointer to argument
  * Return: Nothing
  */
-
 int print_int(va_list i)
 {
-	print_number(va_arg(i, int));
-	return (-1);
+	int j = (va_arg(i, int));
+	print_number(j);
+	return (count_digit(j));
 }
 
 /**
@@ -66,10 +62,9 @@ int print_int(va_list i)
  * @d: pointer to argument
  * Return: Nothing
  */
-
 int print_decimal(va_list d)
 {
 	int i = va_arg(d, int);
 	print_number(i);
-	return (-1);
+	return (count_digit(i));
 }

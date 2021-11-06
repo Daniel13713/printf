@@ -39,3 +39,28 @@ void print_number(int n)
 	}
 	_putchar((n1 % 10) + '0');
 }
+
+/**
+ * count_digit - Function count digits
+ * @i: Check i
+ * @return i
+ */
+int count_digit(int i)
+{
+    unsigned int j = 0;
+    unsigned int k;
+
+    if (i < 0)
+	{
+        k = i * -1;
+		j++;
+	}
+	else
+        k = i;
+    while (k != 0)
+    {
+        k /= 10;
+        j++;
+    }
+    return (j);
+}

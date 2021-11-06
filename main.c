@@ -11,6 +11,7 @@ int main(void)
 {
     int len;
     int len2;
+    int len3;
 
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
@@ -26,8 +27,9 @@ int main(void)
     printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    _printf("h%c-%s-%s", 'a', "hola", "holas");
-
+    len3 = _printf("h%c-%s-%s-%d-%%hola\n", 'a', "hola", "holas", -123456);
+    printf("Prueba: [%d, %i]\n", len3, len3);
+    _printf("Prueba: [%d, %i]\n", len3, len3);
 
     return (0);
 }
