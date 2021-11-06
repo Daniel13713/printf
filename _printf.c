@@ -4,17 +4,37 @@
  * @format: Check format
  */
 int _printf(const char *format, ...)
-{
-    int i;
-    char *buf;
-    va_list arg;
+{	
+    va_list ap;
 
-    va_start(arg, format);
-    if (format == NULL)
-    {
-        exit(98);
+	print_t arg[] = {
+		{"c", print_char},
+		{"s", print_str},
+		/*{"%", print_percent},*/
+		{NULL, NULL}
+	};
+
+	int i, j;
+    va_start(ap, format);
+
+	for (i = 0; format[i] != '\0'; i++)
+	{
+        if (format[i] == '%')
+		{
+            _putchar(format[i]);
+            continue;
+        }
+        j = 0;
+	    while (arg[j].name)
+	    {
+            if (format[i + 1] == *arg[j].name)
+            {
+                arg[j].f(ap);
+                break;
+            }
+            j++;
+        }
     }
-
-    buf = get_op_func(arg, format, buf);
-    if ()
+    va_end(ap);
+    return (0);
 }
