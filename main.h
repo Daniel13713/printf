@@ -10,7 +10,7 @@
 typedef struct my_printf
 {
 	char name;
-	void (f)(va_list);
+	void (*f)(va_list);
 } print_t;
 
 int _printf(const char *format, ...);
