@@ -1,10 +1,8 @@
 #include "main.h"
-
 /**
- *
- *
+ * _printf - Produces output according to a format
+ * @format: Character string
  */
-
 int _printf(const char *format, ...);
 {
 	va_list ap;
@@ -16,13 +14,31 @@ int _printf(const char *format, ...);
 		{NULL, NULL}
 	};
 
-	int i;
-	char *s, travers;
+	int i = 0, j;
+	char *s;
 
 	va_start(ap, format);
-	while (travers != '%')
+
+	while (aux != '%')
 	{
-		putchar(*travers);
+		putchar(*aux);
 		continue;
 	}
+	while (format && format[i])
+	{
+		j = 0;
+		while (arg[j].name)
+		{
+			if (format[i] == *arg[j].name)
+			{
+				putchar(s);
+				arg[j].f(ap);
+				break;
+			}
+			j++;
+		}
+		i++;
+	}
+	va_end(ap);
 }
+
