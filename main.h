@@ -13,6 +13,8 @@ typedef struct my_printf
 	void (*f)(va_list);
 } print_t;
 
+int _putchar(char c);
+int _len(char *s);
 int _printf(const char *format, ...);
 
 void print_char(va_list ap);

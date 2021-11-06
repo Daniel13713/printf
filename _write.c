@@ -10,7 +10,8 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int _write(char c, int len)
+int _putchar(char c)
 {
-	return (write(1, &c, len));
+	write(1, &c, 1);
+    return (0);
 }
