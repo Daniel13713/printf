@@ -15,5 +15,8 @@ typedef struct my_printf
 
 int _printf(const char *format, ...);
 
+void print_char(va_list ap);
+void print_str(va_list ap);
+void print_char(va_list ap);
 
 #endif
