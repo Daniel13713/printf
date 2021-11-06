@@ -10,7 +10,7 @@
 typedef struct my_printf
 {
 	char *name;
-	void (*f)(va_list);
+	int (*f)(va_list);
 } print_t;
 
 int _putchar(char c);
@@ -19,8 +19,8 @@ void print_number(int n);
 int _printf(const char *format, ...);
 
 int print_char(va_list ap);
-void print_str(va_list ap);
-void print_percent(va_list ap);
-void print_decimal(va_list ap);
-void print_int(va_list ap);
+int print_str(va_list ap);
+int print_percent(va_list ap);
+int print_decimal(va_list ap);
+int print_int(va_list ap);
 #endif

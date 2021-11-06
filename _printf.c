@@ -7,6 +7,7 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int len = 0;
+	int k = 0;
 
 	print_t arg[] = {
 		{"c", print_char},
@@ -29,7 +30,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == *arg[j].name)
 				{
-       		 			len = arg[j].f(ap);
+       		 			len += arg[j].f(ap);
        	        	 		break;
            			}
             			j++;
@@ -38,8 +39,11 @@ int _printf(const char *format, ...)
 		else if (format[i - 1] != '%')
 		{
 			_putchar(format[i]);
+			k++;
 		}
 	}
+	printf("end\n");
+	printf("k = %d\n len = %d\n", k, len);
     	va_end(ap);
     	return (len);
 }
