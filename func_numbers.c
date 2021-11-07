@@ -8,7 +8,7 @@ int print_int(va_list i)
 {
 	int j = (va_arg(i, int));
 	print_number(j);
-	return (count_digit(j));
+	return (count_digit_base(j, 10));
 }
 
 /**
@@ -20,7 +20,7 @@ int print_decimal(va_list d)
 {
 	int i = va_arg(d, int);
 	print_number(i);
-	return (count_digit(i));
+	return (count_digit_base(i, 10));
 }
 
 
@@ -30,23 +30,62 @@ int print_decimal(va_list d)
  * Return: Nothing
  */
 
-int decabin (unsigned int n, int count, int b) 
+char* decabin (unsigned int n, char *pr, int i, int base) 
 {
     if (n)
     {
-	    decabin(n / 2, count + 1, b + 1);
-	    _putchar(n % 2 + '0');
+	    pr[i] = n % base + '0';
+	    decabin(n / base, pr, i + 1, base);
     }
-    /*printf("\nc = %d\n", count);*/
-    return (b);
+    return (pr);
 }
 
 int print_b(va_list d)
 {
 	unsigned int decimal = 0;
-	int len = 0;
+	int len = 0, len_num = 0;
+	char *p = NULL;
 
 	decimal = va_arg(d, unsigned int);
-	len = decabin(decimal, len, 0);
-	return (len + 1);
+	len_num = count_digit_base(decimal, 2);
+	p = malloc(len_num * sizeof(char));
+	if (!p)
+	{
+		free(p);
+		return (-1);
+	}
+	p = decabin(decimal, p, 0, 2);
+	p[len_num] = '\0';
+	rev_string(p);
+	len = print_chars(p);
+	free(p);
+	return (len);
+}
+
+/**
+ *
+ *
+ */
+
+int print_o(va_list d)
+{
+	unsigned int decimal = 0;
+	int len = 0, len_num = 0;
+	char *p = NULL;
+
+	decimal = va_arg(d, unsigned int);
+	len_num = count_digit_base(decimal, 8);
+	p = malloc(len_num * sizeof(char));
+	if (!p)
+	{
+		free(p);
+		return (-1);
+	}
+
+	p = decabin(decimal, p, 0, 8);
+	p[len_num] = '\0';
+	rev_string(p);
+	len = print_chars(p);
+	free(p);
+	return (len);
 }

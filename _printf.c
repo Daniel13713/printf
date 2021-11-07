@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"d", print_decimal},
 		{"i", print_int},
 		{"b", print_b},
+		{"o", print_o},
         {"%", print_percent},
 		{NULL, NULL}
 	};
@@ -31,9 +32,9 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == *arg[j].name)
 				{
-    	 			len += arg[j].f(ap);
-        	 		break;
-           		}
+    	 				len += arg[j].f(ap);
+        	 			break;
+           			}
         		j++;
 			}
 			i++;

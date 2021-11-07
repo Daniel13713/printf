@@ -2,6 +2,8 @@
 #define _MAINH
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
+
 
 /**
  * @name: Conversion specifier
@@ -15,10 +17,11 @@ typedef struct my_printf
 
 int _putchar(char c);
 int _len(char *s);
-int count_digit(int i);
+int count_digit_base(int i, int base);
 void print_number(int n);
-int decabin (unsigned int n, int count, int b); 
+char* decabin (unsigned int n, char *pr, int i, int base); 
 int _printf(const char *format, ...);
+void rev_string(char *s);
 
 int print_char(va_list c);
 int print_str(va_list s);
@@ -27,5 +30,6 @@ int print_decimal(va_list d);
 int print_int(va_list i);
 int print_b(va_list d);
 int print_chars(char *str);
+int print_o(va_list d);
 
 #endif

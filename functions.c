@@ -45,7 +45,7 @@ void print_number(int n)
  * @i: Check i
  * @return i
  */
-int count_digit(int i)
+int count_digit_base(int i, int base)
 {
     unsigned int j = 0;
     unsigned int k;
@@ -59,7 +59,7 @@ int count_digit(int i)
         k = i;
     while (k != 0)
     {
-        k /= 10;
+        k /= base;
         j++;
     }
     return (j);
@@ -85,4 +85,35 @@ int print_chars(char *str)
 	}
 	return (i);
 }
+
+/**
+ * rev_string - Function that reverse a string
+ *
+ * @s: string
+ * Return: Nothing
+ */
+
+void rev_string(char *s)
+{
+	int i, j, k;
+	char c[1024];
+	char *p = c;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+
+	for (j = i - 1; j >= 0; --j)
+	{
+		p[i - j - 1] = *(s + j);
+	}
+	for (k = 0; k <= i - 1; k++)
+	{
+		s[k] = p[k];
+	}
+}
+
+
 
