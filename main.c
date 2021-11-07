@@ -12,6 +12,7 @@ int main(void)
     int len;
     int len2;
     int len3;
+    /*int len4;*/
 
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
@@ -27,9 +28,20 @@ int main(void)
     printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
+    /*_printf("\nDecimal -> Binary\n");
+    len4 = _printf("%b\n", 98); 
+    _printf("len:[%d]\n", len4);*/
+
+    printf("-----------------\n");
+    _printf("Percent:[%]\n");
+    printf("Percent:[%]\n");
+
+    printf("-----------------\n");
     len3 = _printf("h%c-%s-%s-%d-%%hola\n", 'a', "hola", "holas", -123456);
     printf("Prueba: [%d, %i]\n", len3, len3);
     _printf("Prueba: [%d, %i]\n", len3, len3);
+   
+
 
     return (0);
 }

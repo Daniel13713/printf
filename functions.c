@@ -64,3 +64,25 @@ int count_digit(int i)
     }
     return (j);
 }
+
+/**
+ * print_chars - print characteres
+ *
+ * @str: string passed
+ * Return: len of str
+ */
+int print_chars(char *str)
+{
+	int i = 0;
+	if (str)
+	{
+		while (*str)
+		{
+			_putchar(*str);
+			str++;
+			i++;
+		}
+	}
+	return (i);
+}
+
