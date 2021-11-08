@@ -12,14 +12,12 @@ int main(void)
 	int len1 = 0;
 	int len2 = 0;
 
-
 	_printf("----------------------------\n");
 	_printf("OCTAL (o)\n");
 	len1 = _printf("%o\n", 98);
 	len2 = printf("%o\n", 98);
 	_printf("len:[%d-%i]\n", len1, len2);
 	printf("len:[%d-%i]\n", len1, len2);
-
 
 	_printf("----------------------------\n");
 	_printf("OCTAL (o)\n");
@@ -49,7 +47,5 @@ int main(void)
 	_printf("len:[%d-%i]\n", len1, len2);
 	printf("len:[%d-%i]\n", len1, len2);
 
-
 	return (0);
-	
 }

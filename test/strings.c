@@ -24,11 +24,8 @@ int main(void)
 	_printf("len:[%d-%i]\n", len1, len2);
 	printf("len:[%d-%i]\n", len1, len2);*/
 
-
 	/*printf("%%%\n");*/
 	_printf("%%%");
 
-
 	return (0);
-	
 }

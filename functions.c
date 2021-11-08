@@ -1,8 +1,7 @@
 #include "main.h"
 /**
- * _strlen - The length of a string
+ * _len - The length of a string
  * @s: Check the string
- *
  * Return: Always 0
  */
 int _len(char *s)
@@ -17,7 +16,6 @@ int _len(char *s)
 /**
  * prime_number - Prints a prime number
  * @n: check n
- * @i: Check a number aux
  * Return: 1 if the input integer is a prime number, otherwise return 0
  */
 void print_number(int n)
@@ -41,39 +39,40 @@ void print_number(int n)
 }
 
 /**
- * count_digit - Function count digits
+ * count_digit_base - Function count digits
  * @i: Check i
- * @return i
+ * @base: Check base
+ * Return: i
  */
 int count_digit_base(int i, int base)
 {
-    unsigned int j = 0;
-    unsigned int k;
+	unsigned int j = 0;
+	unsigned int k;
 
-    if (i < 0)
+	if (i < 0)
 	{
-        k = i * -1;
+		k = i * -1;
 		j++;
 	}
 	else
-        k = i;
-    while (k != 0)
-    {
-        k /= base;
-        j++;
-    }
-    return (j);
+		k = i;
+	while (k != 0)
+	{
+		k /= base;
+		j++;
+	}
+	return (j);
 }
 
 /**
  * print_chars - print characteres
- *
  * @str: string passed
  * Return: len of str
  */
 int print_chars(char *str)
 {
 	int i = 0;
+
 	if (str)
 	{
 		while (*str)
@@ -88,7 +87,6 @@ int print_chars(char *str)
 
 /**
  * rev_string - Function that reverse a string
- *
  * @s: string
  * Return: Nothing
  */
@@ -114,6 +112,3 @@ void rev_string(char *s)
 		s[k] = p[k];
 	}
 }
-
-
-

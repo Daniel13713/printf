@@ -1,24 +1,26 @@
 #include "main.h"
 /**
- * @print_int - print type int
+ * print_int - print type int
  * @i: pointer to argument
  * Return: Nothing
  */
 int print_int(va_list i)
 {
 	int j = (va_arg(i, int));
+
 	print_number(j);
 	return (count_digit_base(j, 10));
 }
 
 /**
- * @print_dec - print type decimal
+ * print_dec - print type decimal
  * @d: pointer to argument
  * Return: Nothing
  */
 int print_dec(va_list d)
 {
 	int i = va_arg(d, int);
+
 	print_number(i);
 	return (count_digit_base(i, 10));
 }
@@ -26,18 +28,19 @@ int print_dec(va_list d)
 /**
  * decabin - Function aux
  * @n: Check n
+ * @i: Counter
  * @pr: Pointer to argument
  * @base: Check base
  * Return: Nothing
  */
-char* decabin(unsigned int n, char *pr, int i, int base) 
+char *decabin(unsigned int n, char *pr, int i, int base)
 {
-    if (n)
-    {
-	    pr[i] = n % base + '0';
-	    decabin(n / base, pr, i + 1, base);
-    }
-    return (pr);
+	if (n)
+	{
+		pr[i] = n % base + '0';
+		decabin(n / base, pr, i + 1, base);
+	}
+	return (pr);
 }
 
 /**
