@@ -22,7 +22,6 @@ int _printf(const char *format, ...);
 void rev_string(char *s);
 int print_char(va_list c);
 int print_str(va_list s);
-int print_perc(va_list p);
 int print_dec(va_list d);
 int print_int(va_list i);
 int print_b(va_list d);
@@ -35,7 +34,6 @@ static const print_t arg[] = {
 	{"i", print_int},
 	{"b", print_b},
 	{"o", print_oct},
-	{"%", print_perc},
 	{NULL, NULL}};
 
 #endif
