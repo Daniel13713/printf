@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * @print_char - print type char
+ * @print_int - print type int
  * @i: pointer to argument
  * Return: Nothing
  */
@@ -12,25 +12,25 @@ int print_int(va_list i)
 }
 
 /**
- * @print_char - print type char
+ * @print_dec - print type decimal
  * @d: pointer to argument
  * Return: Nothing
  */
-int print_decimal(va_list d)
+int print_dec(va_list d)
 {
 	int i = va_arg(d, int);
 	print_number(i);
 	return (count_digit_base(i, 10));
 }
 
-
 /**
- * @print_char - print type char
- * @d: pointer to argument
+ * decabin - Function aux
+ * @n: Check n
+ * @pr: Pointer to argument
+ * @base: Check base
  * Return: Nothing
  */
-
-char* decabin (unsigned int n, char *pr, int i, int base) 
+char* decabin(unsigned int n, char *pr, int i, int base) 
 {
     if (n)
     {
@@ -40,6 +40,11 @@ char* decabin (unsigned int n, char *pr, int i, int base)
     return (pr);
 }
 
+/**
+ * print_b - Print type binary
+ * @d: Pointer to argument
+ * Return: Nothing
+ */
 int print_b(va_list d)
 {
 	unsigned int decimal = 0;
@@ -63,17 +68,17 @@ int print_b(va_list d)
 }
 
 /**
- *
- *
+ * print_oct - Print type octal
+ * @o: Pointer to argument
+ * Return: Nothing
  */
-
-int print_o(va_list d)
+int print_oct(va_list o)
 {
 	unsigned int decimal = 0;
 	int len = 0, len_num = 0;
 	char *p = NULL;
 
-	decimal = va_arg(d, unsigned int);
+	decimal = va_arg(o, unsigned int);
 	len_num = count_digit_base(decimal, 8);
 	p = malloc(len_num * sizeof(char));
 	if (!p)

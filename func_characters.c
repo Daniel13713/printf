@@ -12,7 +12,6 @@ int print_char(va_list c)
 
 /**
  * @print_str - print type char *
- *
  * @s: pointer to argument
  * Return: Nothing
  */
@@ -26,12 +25,11 @@ int print_str(va_list s)
 }
 
 /**
- * @print_percent - print a porcent sing (%)
- *
+ * @print_perc - print a porcent sing (%)
  * @p: pointer to argument
  * Return: Nothing
  */
-int print_percent(va_list __attribute__ ((unused)) p)
+int print_perc(va_list __attribute__ ((unused)) p)
 {
 	_putchar('%');
 	return (1);

@@ -25,11 +25,11 @@ void rev_string(char *s);
 
 int print_char(va_list c);
 int print_str(va_list s);
-int print_percent(va_list p);
-int print_decimal(va_list d);
+int print_perc(va_list p);
+int print_dec(va_list d);
 int print_int(va_list i);
 int print_b(va_list d);
 int print_chars(char *str);
-int print_o(va_list d);
+int print_oct(va_list d);
 
 #endif

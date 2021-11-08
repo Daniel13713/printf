@@ -6,45 +6,49 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int len = 0;
-	int k = 0;
+	int i, j, len = 0;
+	int count = 0;
 
 	print_t arg[] = {
 		{"c", print_char},
 		{"s", print_str},
-		{"d", print_decimal},
+		{"d", print_dec},
 		{"i", print_int},
 		{"b", print_b},
-		{"o", print_o},
-        {"%", print_percent},
-		{NULL, NULL}
-	};
+		{"o", print_oct},
+		{"%", print_perc},
+		{NULL, NULL}};
 
-	int i, j;
 	va_start(ap, format);
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
-        	if (format[i] == '%')
+		if (format[i] == '%')
 		{
 			j = 0;
 			while (arg[j].name)
 			{
 				if (format[i + 1] == *arg[j].name)
 				{
-    	 				len += arg[j].f(ap);
-        	 			break;
-           			}
-        		j++;
+					len += arg[j].f(ap);
+					break;
+				}
+				j++;
+			}
+			if (!arg[j].name)
+			{
+				_putchar('%');
+				i--;
+				len++;
 			}
 			i++;
 		}
 		else if (format[i] != '%')
 		{
 			_putchar(format[i]);
-			k++;
+			count++;
 		}
 	}
-    va_end(ap);
-	return (k + len);
+	va_end(ap);
+	return (count + len);
 }
