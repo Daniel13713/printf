@@ -60,7 +60,7 @@ int print_b(va_list d)
 	if (!p)
 	{
 		free(p);
-		return (-1);
+		exit(98);
 	}
 	p = decabin(decimal, p, 0, 2);
 	p[len_num] = '\0';
@@ -87,7 +87,7 @@ int print_oct(va_list o)
 	if (!p)
 	{
 		free(p);
-		return (-1);
+		exit(98);
 	}
 
 	p = decabin(decimal, p, 0, 8);
