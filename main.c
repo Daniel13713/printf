@@ -44,5 +44,16 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
+	len = _printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+	len2 = printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');	
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);
+
+
+	len = _printf("css%ccs%scscscs\n", 'T', "Test");
+	len2 = printf("css%ccs%scscscs\n", 'T', "Test");
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);
+
 	return (0);
 }
