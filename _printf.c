@@ -2,6 +2,7 @@
 /**
  * _printf - Our own printf 
  * @format: Check format
+ * Return: len
  */
 int _printf(const char *format, ...)
 {
@@ -19,7 +20,6 @@ int _printf(const char *format, ...)
 		{NULL, NULL}};
 
 	va_start(ap, format);
-
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')

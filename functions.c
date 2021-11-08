@@ -14,7 +14,7 @@ int _len(char *s)
 }
 
 /**
- * prime_number - Prints a prime number
+ * print_number - Prints a prime number
  * @n: check n
  * Return: 1 if the input integer is a prime number, otherwise return 0
  */
