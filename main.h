@@ -26,6 +26,7 @@ int print_dec(va_list d);
 int print_int(va_list i);
 int print_b(va_list d);
 int print_chars(char *str);
+int print_perc(va_list p);
 int print_oct(va_list d);
 static const print_t arg[] = {
 	{"c", print_char},
@@ -34,6 +35,7 @@ static const print_t arg[] = {
 	{"i", print_int},
 	{"b", print_b},
 	{"o", print_oct},
+	{"%", print_perc},
 	{NULL, NULL}};
 
 #endif

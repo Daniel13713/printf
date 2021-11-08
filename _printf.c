@@ -28,6 +28,7 @@ int _printf(const char *format, ...)
 			if (!arg[j].name)
 			{
 				_putchar(format[i]);
+				i--;
 				len++;
 			}
 			i++;
