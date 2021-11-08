@@ -58,10 +58,10 @@ int main(void)
 	/*len = _printf("/%-5%---%t\n");
 	len2 = printf("/%-5%---%t\n");
 	_printf("Len:[%d]\n", len);
-	printf("Len:[%d]\n", len2);*/
+	printf("Len:[%d]\n", len2);
 
 	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");
-	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");
+	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");*/
 
 
 	return (0);
