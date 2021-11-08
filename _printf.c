@@ -25,12 +25,14 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-			if (!arg[j].name)
+			if (!arg[j].name && format[i + 1] != '\0')
 			{
 				_putchar(format[i]);
 				i--;
 				len++;
 			}
+			if (!arg[j].name && format[i + 1] == '\0')
+				return (-1);
 			i++;
 		}
 		else if (format[i] != '%')

@@ -39,8 +39,8 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
-	len = _printf("%\n");
-	len2 = printf("%\n");
+	len = _printf("%");
+	len2 = printf("%");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
@@ -55,8 +55,10 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
-	len = _printf("%z---%z\n");
-	len2 = printf("%z---%z\n");
+	len = _printf("%---%");
+	printf("\n");
+	len2 = printf("%---%");
+	printf("\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
