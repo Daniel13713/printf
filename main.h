@@ -35,6 +35,6 @@ const print_t arg[] = {
 	{"i", print_int},
 	{"b", print_b},
 	{"o", print_oct},
-	{"%", print_perc},
+	{"%", print_perc},	
 	{NULL, NULL}};
 #endif
