@@ -39,8 +39,8 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
-	len = _printf("%% \n");
-	len2 = printf("%% \n");
+	len = _printf("%%%% \n");
+	len2 = printf("%%%% \n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
@@ -54,6 +54,15 @@ int main(void)
 	len2 = printf("css%ccs%scscscs\n", 'T', "Test");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
+
+	/*len = _printf("/%-5%---%t\n");
+	len2 = printf("/%-5%---%t\n");
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);*/
+
+	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");
+	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");
+
 
 	return (0);
 }
