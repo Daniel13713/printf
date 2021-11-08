@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-
-
 /**
  * @name: Conversion specifier
  * @f: Check
@@ -22,7 +20,6 @@ void print_number(int n);
 char* decabin (unsigned int n, char *pr, int i, int base); 
 int _printf(const char *format, ...);
 void rev_string(char *s);
-
 int print_char(va_list c);
 int print_str(va_list s);
 int print_perc(va_list p);
@@ -31,5 +28,13 @@ int print_int(va_list i);
 int print_b(va_list d);
 int print_chars(char *str);
 int print_oct(va_list d);
-
+print_t arg[] = {
+	{"c", print_char},
+	{"s", print_str},
+	{"d", print_dec},
+	{"i", print_int},
+	{"b", print_b},
+	{"o", print_oct},
+	{"%", print_perc},	
+	{NULL, NULL}};
 #endif
