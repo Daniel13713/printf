@@ -28,6 +28,7 @@ int _printf(const char *format, ...)
 			if (!arg[j].name && format[i + 1] != '\0')
 			{
 				_putchar(format[i]);
+				i--;
 				len++;
 			}
 			if (!arg[j].name && format[i + 1] == '\0')
