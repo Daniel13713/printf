@@ -17,7 +17,7 @@ int _putchar(char c);
 int _len(char *s);
 int count_digit_base(int i, int base);
 void print_number(int n);
-char *decabin(unsigned int n, char *pr, int i, int base);
+char *decabin(int n, char *pr, int i, int base);
 int _printf(const char *format, ...);
 void rev_string(char *s);
 int print_char(va_list c);
