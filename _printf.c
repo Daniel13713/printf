@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 	if (format == NULL)
-		exit(98);
+		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
@@ -28,7 +28,6 @@ int _printf(const char *format, ...)
 			if (!arg[j].name && format[i + 1] != '\0')
 			{
 				_putchar(format[i]);
-				i--;
 				len++;
 			}
 			if (!arg[j].name && format[i + 1] == '\0')
