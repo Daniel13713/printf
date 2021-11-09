@@ -27,7 +27,8 @@ int main(void)
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-	_printf("Decimal is = [%d] || Binary is = [%b]\n", 98, 98);
+	len = _printf("%d-%b\n", -98, -98);
+	_printf("Len:[%d]\n", len);
 	/*printf("Decimal is = [%d] || Binary is = [%b]\n", 15, 15);*/
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);

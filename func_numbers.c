@@ -55,6 +55,11 @@ int print_b(va_list d)
 	char *p = NULL;
 
 	decimal = va_arg(d, int);
+	if (!decimal)
+	{
+		_putchar(48);
+		return (1);
+	}
 	len_num = count_digit_base(decimal, 2);
 	p = malloc(len_num * sizeof(char));
 	if (!p)
