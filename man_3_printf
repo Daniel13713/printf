@@ -21,14 +21,14 @@
 
 .SH DESCRIPTION
 .B _printf() produce output according to a format.
-       The function _printf() write output to stdout, the standard output 
-       stream. Show the string, number decimal or any other format specifier 
+       The function _printf() write output to stdout, the standard output
+       stream. Show the string, number decimal or any other format specifier
        created by the user. Returns the number of characters that are printed.
 
 .br
 .PP The functions print_char(), print_str(), print_perc(), print_dec(),
        print_int(), print_b(), print_chars(), print_oct() are equivalent to
-       the function _printf() , respectively, except that they are called 
+       the function _printf() , respectively, except that they are called
        with a va_list instead of a variable number of arguments.
 
 .br
@@ -59,7 +59,7 @@
 
 .TP
 .B s
-       Prints the characters from the given address until a null 
+       Prints the characters from the given address until a null
        character is found.
 
 .TP
@@ -77,15 +77,15 @@
 .B %
        A '%' is written.  No argument is converted.  The complete
        conversion specification is '%%'.
-       
+
 .SH RETURN VALUE
-       This function returns the length string of the number of characters 
+       This function returns the length string of the number of characters
        printed.
 .br
 
 .SH BUGS
        No known bugs.
-       
+
 .SH AUTHOR
        Daniel Duarte Palacios, 3811@holbertonscool.com
        Shara García Betancur, 3779@holbertonscool.com
