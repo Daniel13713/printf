@@ -48,7 +48,7 @@ int main(void)
 	len2 = printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');	
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-
+	/*
 
 	len = _printf("css%ccs%scscscs\n", 'T', "Test");
 	len2 = printf("css%ccs%scscscs\n", 'T', "Test");
@@ -59,6 +59,11 @@ int main(void)
 	printf("\n");
 	len2 = printf(NULL);
 	printf("\n");
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);*/
+
+	len = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	len2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
