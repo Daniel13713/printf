@@ -67,6 +67,11 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
+
+	len = _printf("%d\n", (int)0);
+	len2 = printf("%d\n", (int)0);
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);
 	/*	
 	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");
 	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");*/

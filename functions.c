@@ -49,6 +49,10 @@ int count_digit_base(int i, int base)
 	unsigned int j = 0;
 	unsigned int k;
 
+	if (i == 0)
+	{
+		return (1);
+	}
 	if (i < 0)
 	{
 		k = i * -1;
