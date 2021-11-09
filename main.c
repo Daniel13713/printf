@@ -72,6 +72,12 @@ int main(void)
 	len2 = printf("%d\n", (int)0);
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
+
+	len = _printf("%b\n", (unsigned int)0);
+	len2 = _printf("%b\n", 2);
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);
+
 	/*	
 	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");
 	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");*/

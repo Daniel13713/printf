@@ -56,6 +56,11 @@ int print_b(va_list d)
 
 	decimal = va_arg(d, unsigned int);
 	len_num = count_digit_base(decimal, 2);
+	if (len_num == 1 && (decimal > 1 || decimal <= 0))
+	{
+		_putchar(48);
+		return (-1);
+	}
 	p = malloc(len_num * sizeof(char));
 	if (!p)
 	{
