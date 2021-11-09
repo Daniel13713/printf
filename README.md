@@ -1,12 +1,14 @@
-# _Printf Funtion
+# _Printf Function
 
-This is a custom version of the printf function of standard library of C language, with some of more important indicadors of format [man](https://man7.org/linux/man-pages/man3/printf.3.html)
+### _printf 
+
+This is a customized version of the printf function from the standard C language library, which produces output in a formatted form, with some of the most important printf [man](https://man7.org/linux/man-pages/man3/printf.3.html) flags.
 
 **Table of Contents**
 
-
 - [Features](#features)
 - [Usage](#usage)
+- [Man](#man)
 - [Flowchart](#flowchart)
 
 ## Features
@@ -17,11 +19,38 @@ You should learn from this project:
 - Applying *variadic functions* to a big project in C
 - Understand the complexities of printf function
 
-### Conversion specifiers Avalibles
-- **%c**  : 
-- **%s**  :
-- **%d**  :
-- **%i**  :
+### Conversion specifiers
+- ***%c***  : Type the format *c* to print a character.
+- ***%s***  : Type the format *s* to print a string.
+- ***%d***  : Type the format *d* to print an integer.
+- ***%i***  : Type the format *i* to print an integer as well.
+
+### How To Use
+
+Use our _printf function with the format specifiers already mentioned, *examples* :
+
+***Character*** : _printf("Character:[%c]\n", 'H');
+
+***String***    : _printf("String:[%s]\n", "I am a string !");
+
+***Integer d*** : _printf("Negative:[%d]\n", -762534);
+
+***Integer i***   : _printf("Positive:[%i]\n", 2021);
+
+
+### Output
+```bash
+Character:[H]
+```
+```bash
+String:[I am a string !]
+```
+```bash
+Negative:[-762534]
+```
+```bash
+Positive:[2021]
+```
 
 ## Usage
 ### Installation
@@ -60,13 +89,22 @@ _printf("%s\n", "g-i-t 20");
  */
 _printf("g-i-t %d\n", 20);
 ```
+## Man
+**Man Page** :books:
+To see the *man page* of our **_printf** function use:
+
+```bash
+man ./man_3_printf
+```
+
 ## Flowchart 
 
-*****add image***** 
+![Flowchart]()
 
-## Authors
+## Authors :pen:
 - [Shara García](https://github.com/SharaGB)
 - [Daniel Duarte](https://github.com/Daniel13713)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
