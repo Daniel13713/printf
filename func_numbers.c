@@ -33,7 +33,7 @@ int print_dec(va_list d)
  * @base: Check base
  * Return: Nothing
  */
-char *decabin(unsigned int n, char *pr, int i, int base)
+char *decabin(int n, char *pr, int i, int base)
 {
 	if (n)
 	{
@@ -50,22 +50,27 @@ char *decabin(unsigned int n, char *pr, int i, int base)
  */
 int print_b(va_list d)
 {
-	unsigned int decimal = 0;
+	int decimal = 0;
 	int len = 0, len_num = 0;
 	char *p = NULL;
 
-	decimal = va_arg(d, unsigned int);
-	len_num = count_digit_base(decimal, 2);
-	if (len_num == 1 && (decimal > 1 || decimal <= 0))
+	decimal = va_arg(d, int);
+	if (!decimal)
 	{
 		_putchar(48);
-		return (-1);
+		return (1);
 	}
+	len_num = count_digit_base(decimal, 2);
 	p = malloc(len_num * sizeof(char));
 	if (!p)
 	{
 		free(p);
 		return (-1);
+	}
+	if (decimal < 0)
+	{
+		decimal = -1 * decimal;
+		_putchar('-');
 	}
 	p = decabin(decimal, p, 0, 2);
 	p[len_num] = '\0';

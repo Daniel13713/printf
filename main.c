@@ -27,7 +27,8 @@ int main(void)
 	len2 = printf("Percent:[%%]\n");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
-	_printf("Decimal is = [%d] || Binary is = [%b]\n", 15, 15);
+	len = _printf("%d-%b\n", -98, -98);
+	_printf("Len:[%d]\n", len);
 	/*printf("Decimal is = [%d] || Binary is = [%b]\n", 15, 15);*/
 	_printf("Unsigned octal:[%o]\n", ui);
 	printf("Unsigned octal:[%o]\n", ui);
@@ -39,8 +40,8 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
-	len = _printf("%ñ");
-	len2 = printf("%ñ");
+	len = _printf("%%");
+	len2 = printf("%%");
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
@@ -60,7 +61,7 @@ int main(void)
 	len2 = printf(NULL);
 	printf("\n");
 	_printf("Len:[%d]\n", len);
-	printf("Len:[%d]\n", len2);*/
+	printf("Len:[%d]\n", len2);
 
 	len = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
 	len2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
@@ -76,7 +77,7 @@ int main(void)
 	len = _printf("%b\n", (unsigned int)0);
 	len2 = _printf("%b\n", 2);
 	_printf("Len:[%d]\n", len);
-	printf("Len:[%d]\n", len2);
+	printf("Len:[%d]\n", len2);*/
 
 	/*	
 	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");
