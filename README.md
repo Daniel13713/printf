@@ -98,8 +98,7 @@ man ./man_3_printf
 ```
 
 ## Flowchart 
-
-![Flowchart](/home/misery/Descargas/Diagram-printf.png)
+/home/misery/Descargas/Diagram-printf.png
 
 ## Authors :pen:
 - [Shara García](https://github.com/SharaGB)
