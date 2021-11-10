@@ -58,7 +58,7 @@ Positive:[2021]
 Use [git](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) to clone this repository in your local machine 
 
 ```bash
-git clone git@github.com:Daniel13713/printf.git
+git clone https://github.com/Daniel13713/printf.git
 ```
 
 ### Compilation
