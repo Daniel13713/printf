@@ -23,6 +23,7 @@ void rev_string(char *s);
 int print_char(va_list c);
 int print_str(va_list s);
 int print_dec(va_list d);
+int print_unsing(va_list d);
 int print_int(va_list i);
 int print_b(va_list d);
 int print_chars(char *str);
@@ -39,6 +40,7 @@ static const print_t arg[] = {
 	{"o", print_oct},
 	{"r", print_rev_str},
 	{"R", print_rot13},
+	{"u", print_unsing},
 	{"%", print_perc},
 	{NULL, NULL}};
 

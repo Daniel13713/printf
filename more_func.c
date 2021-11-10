@@ -58,3 +58,17 @@ int print_rot13(va_list R)
 	}
 	return (count);
 }
+
+
+/**
+ * print_unsing - print type int
+ * @i: pointer to argument
+ * Return: Nothing
+ */
+int print_unsing(va_list i)
+{
+	unsigned int j = (va_arg(i, unsigned int));
+
+	print_number(j);
+	return (count_digit_base(j, 10));
+}
