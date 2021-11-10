@@ -11,6 +11,7 @@ int main(void)
 {
 	int len;
 	int len2;
+	long res = INT_MAX;
 	unsigned int ui = 68;
     char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
 
@@ -97,6 +98,18 @@ int main(void)
 
 	len = _printf("%u", -1024);
 	len2 = printf("%u", -1024);
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);
+
+	len = _printf("%u", UINT_MAX);
+	len2 = printf("%u", UINT_MAX);
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);
+
+
+	res *= 2;
+	len = _printf("%u + %u = %u\n", INT_MAX, INT_MAX, res);
+	len2 = printf("%u + %u = %u\n", INT_MAX, INT_MAX, res);
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 

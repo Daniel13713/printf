@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <limits.h>
 /**
  * struct my_printf - Our printf
  * @name: Conversion specifier
