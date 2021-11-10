@@ -99,11 +99,8 @@ man ./man_3_printf
 
 ## Flowchart 
 
-![Flowchart]()
+![Flowchart](/home/misery/Descargas/Diagram-printf.png)
 
 ## Authors :pen:
 - [Shara García](https://github.com/SharaGB)
 - [Daniel Duarte](https://github.com/Daniel13713)
-
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
