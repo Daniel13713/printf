@@ -79,5 +79,10 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);*/
 
+	len = _printf("%b\n", -1024);
+	_printf("Len:[%d]\n", len);
+
+	len = _printf("u_max = %b\n", UINT_MAX);
+	_printf("Len:[%d]\n", len);
 	return (0);
 }

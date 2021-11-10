@@ -61,7 +61,8 @@ int print_b(va_list d)
 		return (1);
 	}
 	len_num = count_digit_base(decimal, 2);
-	p = malloc(len_num * sizeof(char));
+	printf("max = %d\n", len_num);
+	p = malloc(1024 * sizeof(char));
 	if (!p)
 	{
 		free(p);
