@@ -7,10 +7,8 @@
  */
 int print_rev_str(va_list r)
 {
-	int i, j, k, count;
-	char c[1024];
-	char *p = c;
-	char *aux;
+	int i, count;
+	int len = 0;
 	char *s = va_arg(r, char *);
 
 	count = 0;
@@ -18,21 +16,12 @@ int print_rev_str(va_list r)
 	{
 		s = "(null)";
 	}
-	i = 0;
-	while (s[i] != '\0')
+	len = _len(s);
+	for (i = len; i >= 0; i--)
 	{
-		i++;
+		_putchar(s[i]);
+		count++;
 	}
-
-	for (j = i - 1; j >= 0; --j)
-	{
-		p[i - j - 1] = *(s + j);
-	}
-	for (k = 0; k <= i - 1; k++)
-	{
-		aux[k] = p[k];
-	}
-	count = print_chars(aux);
 	return (count);
 }
 
