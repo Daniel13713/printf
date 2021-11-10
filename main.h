@@ -28,6 +28,7 @@ int print_b(va_list d);
 int print_chars(char *str);
 int print_perc(va_list p);
 int print_oct(va_list d);
+int print_rev_str(va_list r);
 int print_rot13(va_list R);
 static const print_t arg[] = {
 	{"c", print_char},
@@ -36,6 +37,7 @@ static const print_t arg[] = {
 	{"i", print_int},
 	{"b", print_b},
 	{"o", print_oct},
+	{"r", print_rev_str},
 	{"R", print_rot13},
 	{"%", print_perc},
 	{NULL, NULL}};
