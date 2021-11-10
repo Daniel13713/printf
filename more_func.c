@@ -17,7 +17,7 @@ int print_rev_str(va_list r)
 		s = "(null)";
 	}
 	len = _len(s);
-	for (i = len; i >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 	{
 		_putchar(s[i]);
 		count++;
