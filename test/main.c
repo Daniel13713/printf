@@ -79,10 +79,5 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);*/
 
-	/*	
-	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");
-	printf("-%-hola-%-mundo-%%-soy-%-daniel\n");*/
-
-
 	return (0);
 }

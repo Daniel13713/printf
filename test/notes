@@ -1,5 +1,3 @@
-
-
 - Debemos arreglar la función de "%u" para el caso en que le pasemos números negativos
 
 - Solucionar el caso de un sólo porcentaje "%" y en general un número impar de porcentajes (debe imprimirlo) (R)
