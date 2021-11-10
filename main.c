@@ -118,5 +118,10 @@ int main(void)
 	_printf("Len:[%d]\n", len);
 	printf("Len:[%d]\n", len2);
 
+	len = _printf("%b", 1024);
+	len2 = printf("10000000000");
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);
+
 	return (0);
 }

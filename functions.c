@@ -13,60 +13,7 @@ int _len(char *s)
 	return (leng);
 }
 
-/**
- * print_number - Prints a prime number
- * @n: check n
- * Return: 1 if the input integer is a prime number, otherwise return 0
- */
-void print_number(int n)
-{
-	unsigned int n1;
 
-	if (n < 0)
-	{
-		_putchar('-');
-		n1 = -n;
-	}
-	else
-	{
-		n1 = n;
-	}
-	if (n1 / 10)
-	{
-		print_number(n1 / 10);
-	}
-	_putchar((n1 % 10) + '0');
-}
-
-/**
- * count_digit_base - Function count digits
- * @i: Check i
- * @base: Check base
- * Return: i
- */
-int count_digit_base(int i, int base)
-{
-	unsigned int j = 0;
-	unsigned int k;
-
-	if (i == 0)
-	{
-		return (1);
-	}
-	if (i < 0)
-	{
-		k = i * -1;
-		j++;
-	}
-	else
-		k = i;
-	while (k != 0)
-	{
-		k /= base;
-		j++;
-	}
-	return (j);
-}
 
 /**
  * print_chars - print characteres
@@ -116,3 +63,72 @@ void rev_string(char *s)
 		s[k] = p[k];
 	}
 }
+
+
+/**
+ * print_number_flag - Prints a prime number
+ * @n: check n
+ * @flag: indicator of flag (ex. "%d" -> 0, "%u"->1 )
+ * Return: 1 if the input integer is a prime number, otherwise return 0
+ */
+void print_number_flag(int n, int flag)
+{
+	unsigned int n1;
+
+	if (n < 0 && flag == 0)
+	{
+		_putchar('-');
+		n1 = -n;
+	}
+	else if (n < 0 && flag == 1)
+	{
+		n1 = UINT_MAX + n + 1;
+	}
+	else
+	{
+		n1 = n;
+	}
+
+	if (n1 / 10)
+	{
+		print_number_flag(n1 / 10, flag);
+	}
+	_putchar((n1 % 10) + '0');
+}
+
+/**
+ * count_digit_base_flag - Function count digits
+ * @i: Check i
+ * @base: Check base
+ * @flag: indicator of flag (ex. "%d" -> 0, "%u"->1 )
+ * Return: i
+ */
+int count_digit_base_flag(int i, int base, int flag)
+{
+	unsigned int j = 0;
+	unsigned int k;
+
+	if (i == 0)
+	{
+		return (1);
+	}
+	if (i < 0 && flag == 0)
+	{
+		k = i * -1;
+		j++;
+	}
+	else if (i < 0 && flag == 1)
+	{
+		k = UINT_MAX + i + 1;
+	}
+	else
+		k = i;
+	while (k != 0)
+	{
+		k /= base;
+		j++;
+	}
+	return (j);
+}
+
+

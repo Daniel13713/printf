@@ -50,7 +50,7 @@ char *decabin(int n, char *pr, int i, int base)
  */
 int print_b(va_list d)
 {
-	int decimal = 0;
+	int decimal = 0, j = 0;
 	int len = 0, len_num = 0;
 	char *p = NULL;
 
@@ -60,7 +60,7 @@ int print_b(va_list d)
 		_putchar(48);
 		return (1);
 	}
-	len_num = count_digit_base_flag(decimal, 2, 1);
+	len_num = count_digit_base_flag(decimal, 2, 0);
 	p = malloc(1024 * sizeof(char));
 	if (!p)
 	{
@@ -70,12 +70,17 @@ int print_b(va_list d)
 	if (decimal < 0)
 	{
 		decimal = -1 * decimal;
-		_putchar('-');
+		while (j < 21)
+		{
+			_putchar(1 + '0');
+			j++;
+			len++;
+		}
 	}
 	p = decabin(decimal, p, 0, 2);
 	p[len_num] = '\0';
 	rev_string(p);
-	len = print_chars(p);
+	len += print_chars(p);
 	free(p);
 	return (len);
 }
