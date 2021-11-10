@@ -8,8 +8,8 @@ int print_int(va_list i)
 {
 	int j = (va_arg(i, int));
 
-	print_number(j);
-	return (count_digit_base(j, 10));
+	print_number_flag(j, 0);
+	return (count_digit_base_flag(j, 10, 0));
 }
 
 /**
@@ -21,8 +21,8 @@ int print_dec(va_list d)
 {
 	int i = va_arg(d, int);
 
-	print_number(i);
-	return (count_digit_base(i, 10));
+	print_number_flag(i, 0);
+	return (count_digit_base_flag(i, 10, 0));
 }
 
 /**
@@ -60,7 +60,7 @@ int print_b(va_list d)
 		_putchar(48);
 		return (1);
 	}
-	len_num = count_digit_base(decimal, 2);
+	len_num = count_digit_base_flag(decimal, 2, 1);
 	p = malloc(1024 * sizeof(char));
 	if (!p)
 	{
@@ -92,7 +92,7 @@ int print_oct(va_list o)
 	char *p = NULL;
 
 	decimal = va_arg(o, unsigned int);
-	len_num = count_digit_base(decimal, 8);
+	len_num = count_digit_base_flag(decimal, 8, 1);
 	p = malloc(len_num * sizeof(char));
 	if (!p)
 	{

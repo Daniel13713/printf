@@ -16,8 +16,8 @@ typedef struct my_printf
 } print_t;
 int _putchar(char c);
 int _len(char *s);
-int count_digit_base(int i, int base);
-void print_number(int n);
+int count_digit_base_flag(int i, int base, int flag);
+void print_number_flag(int n, int flag);
 char *decabin(int n, char *pr, int i, int base);
 int _printf(const char *format, ...);
 void rev_string(char *s);

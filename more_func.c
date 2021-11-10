@@ -85,7 +85,7 @@ void print_number_flag(int n, int flag)
 
 	if (n1 / 10)
 	{
-		print_number(n1 / 10);
+		print_number_flag(n1 / 10, flag);
 	}
 	_putchar((n1 % 10) + '0');
 }
