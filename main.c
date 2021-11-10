@@ -12,6 +12,8 @@ int main(void)
 	int len;
 	int len2;
 	unsigned int ui = 68;
+    char s[] = "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.\n";
+
 
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
@@ -84,5 +86,13 @@ int main(void)
 
 	len = _printf("u_max = %b\n", UINT_MAX);
 	_printf("Len:[%d]\n", len);
+
+	_printf("%s", s);
+	printf("%s", s);
+
+	len = _printf("%r", "\nThis sentence is retrieved from va_args!");
+	len2 = printf("!sgra_av morf deveirter si ecnetnes sihT\n");
+	_printf("Len:[%d]\n", len);
+	printf("Len:[%d]\n", len2);
 	return (0);
 }
